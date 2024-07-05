@@ -7,7 +7,7 @@
 
 
 
-nav > div{
+nav > div {
     display: flex;
     align-items: center;
     
@@ -21,7 +21,7 @@ nav > div{
     z-index: 3;
     width: 60%;
 
-    
+    max-width: 800px;
     margin: 0 auto;
 }
 nav {
@@ -50,6 +50,7 @@ input {
     outline: none;
     font-size: 2rem;
     padding-left: 1ch;
+    width: 50%;
 }
 
 .content-container {
@@ -82,16 +83,17 @@ input {
 
 .content-title {
     font-size: 2rem;
-    max-width: 60%;
+    width: 60%;
     margin: 0 auto;
     margin-bottom: 1rem;
+    max-width: 800px;
 }
 
 .content-cards-container {
     border: 1px solid black;
-    max-width: 60%;
+    width: 60%;
     margin: 0 auto;
     padding: 4rem 5rem;
     border-radius: 15px;
-    
+    max-width: 800px;
 }
