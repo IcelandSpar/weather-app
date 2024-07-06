@@ -52,3 +52,52 @@ export async function makeDailyCards() {
 
     }
 }
+
+export function makeHourlyCards() {
+    let hourlyContent = document.querySelector('.hourly-content');
+    hourlyContent.textContent = '';
+    for(let j = 0; j < currentWeather.threeDaysArray[0].hour.length; j++) {
+        let hourlyCard = document.createElement('div');
+        hourlyCard.classList.add('hourly-card');
+        hourlyContent.appendChild(hourlyCard);
+
+        let hourlyTime = document.createElement('div');
+        hourlyTime.textContent = format(currentWeather.threeDaysArray[0].hour[j].time, 'hh:mm aa');
+        hourlyCard.appendChild(hourlyTime)
+
+        let hourlyTemp = document.createElement('div');
+        hourlyTemp.textContent = `${currentWeather.threeDaysArray[0].hour[j].temp_f}°F / ${currentWeather.threeDaysArray[0].hour[j].temp_c}°C`
+        hourlyCard.appendChild(hourlyTemp);
+
+        let hourlyIcon = document.createElement('img');
+        hourlyIcon.classList.add('hourly-icon');
+        hourlyIcon.src = currentWeather.threeDaysArray[0].hour[j].condition.icon;
+        hourlyCard.appendChild(hourlyIcon);
+
+        let hourlyCondition = document.createElement('div');
+        hourlyCondition.textContent = currentWeather.threeDaysArray[0].hour[j].condition.text;
+        hourlyCard.appendChild(hourlyCondition);
+
+        let rainyIcon = document.createElement('div');
+        
+        rainyIcon.src = "./rainy.svg"
+        rainyIcon.classList.add('rainy-icon')
+        hourlyCard.appendChild(rainyIcon);
+        
+        let rainyPercentage = document.createElement('div');
+        rainyPercentage.textContent = `${currentWeather.threeDaysArray[0].hour[j].chance_of_rain}%`
+        hourlyCard.appendChild(rainyPercentage);
+
+        let windIcon = document.createElement('div');
+        windIcon.classList.add('wind-icon');
+        windIcon.src = './rainy.svg'
+        hourlyCard.appendChild(windIcon);
+
+        let windPercent = document.createElement('div');
+        windPercent.textContent = `${currentWeather.threeDaysArray[0].hour[j].wind_mph} mi/h`;
+        hourlyCard.appendChild(windPercent);
+    }
+
+        
+
+}

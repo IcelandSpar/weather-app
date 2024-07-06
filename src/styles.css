@@ -80,7 +80,8 @@ input {
     padding-bottom: 10rem;
     
     background-color: #4D869C;
-    background-image: linear-gradient(#FF7844, #1B1F3A);
+    background-image: linear-gradient(#da673a, #1B1F3A);
+    
     height: 100%;
     
 }
@@ -133,7 +134,7 @@ input {
     align-items: center;
 }
 .current-desc {
-    font-size: 1.5rem;
+    font-size: 2rem;
     max-width: 10rem;
     text-align: center;
 }
@@ -175,4 +176,28 @@ input {
 }
 .last-container {
     margin-bottom: 3rem;
+}
+.hourly-card {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+    border-bottom: 1px solid whitesmoke;
+    border-top: 1px solid whitesmoke;
+    padding: 1rem 0;
+    grid-column: 0 / 8;
+}
+
+.rainy-icon {
+    width: 25px;
+    height: 25px;
+    background-image: url('./rainy.svg');
+    
+}
+
+.wind-icon {
+    width: 25px;
+    height: 25px;
+    background-image: url('./wind.svg');
+    
 }

@@ -1,4 +1,4 @@
-import {updateCurrentCard, makeDailyCards} from './dom.js';
+import {updateCurrentCard, makeDailyCards, makeHourlyCards} from './dom.js';
 
 
 export let currentWeather = {
@@ -20,6 +20,7 @@ currentWeather.iconCondition = data.current.condition.icon
 console.log(currentWeather)
 get3Days(city)
 updateCurrentCard()
+
 return data
 }
 
@@ -31,6 +32,7 @@ export async function get3Days(city) {
   
   currentWeather.threeDaysArray = await daysData.forecast.forecastday
   makeDailyCards()
+  makeHourlyCards()
   return console.log(currentWeather.threeDaysArray)
 }
 
