@@ -32,7 +32,7 @@ export async function makeDailyCards() {
         
 
         let day = document.createElement('div');
-        day.textContent = format(currentWeather.threeDaysArray[i].date, 'EEEE');
+        day.textContent = format(currentWeather.threeDaysArray[i].date.replace(/-/g, '/'), 'EEEE');
         dailyCard.appendChild(day);
 
         let icon = document.createElement('img');
