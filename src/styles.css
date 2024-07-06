@@ -102,7 +102,7 @@ input {
     display: flex;
     flex-direction: column;
     gap: .5rem;
-    background-color: rgba(53, 53, 53, 0.4);
+    background-color: rgba(44, 44, 44, 0.4);
     padding: 1rem;
     border-radius: 15px;
 }
@@ -114,9 +114,18 @@ input {
     font-size: 6rem;
     font-weight: 700;
 }
+.date {
+    font-size: 1.3rem;
+}
+.current-icon {
+    
+    height: 10rem;
+    border: none;
+    width: 10rem;
+}
 
 .current-icon-desc {
-    background-color: rgba(53, 53, 53, 0.4);
+    background-color: rgba(44, 44, 44, 0.4);
     padding: 1rem;
     border-radius: 15px;
     display: flex;
