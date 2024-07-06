@@ -102,7 +102,7 @@ input {
     display: flex;
     flex-direction: column;
     gap: .5rem;
-    background-color: rgba(44, 44, 44, 0.4);
+    background-color: rgba(44, 44, 44, 0.548);
     padding: 1rem;
     border-radius: 15px;
 }
@@ -125,7 +125,7 @@ input {
 }
 
 .current-icon-desc {
-    background-color: rgba(44, 44, 44, 0.4);
+    background-color: rgba(44, 44, 44, 0.548);
     padding: 1rem;
     border-radius: 15px;
     display: flex;
@@ -133,7 +133,9 @@ input {
     align-items: center;
 }
 .current-desc {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    max-width: 10rem;
+    text-align: center;
 }
 .content-title {
     font-size: 2rem;
@@ -154,9 +156,23 @@ input {
     background-color: rgba(53, 53, 53, 0.4);
 }
 .daily-content {
+    font-size: 1.7rem;
+    display: flex;
+    justify-content: space-between;
+    
     text-align: center;
 }
-
+.daily-cards {
+    
+    display: flex;
+    flex-basis: 10rem;
+    align-items: center;
+    flex-direction: column;
+    flex-shrink: 1;
+    gap: 1rem;
+    
+    
+}
 .last-container {
     margin-bottom: 3rem;
 }
