@@ -2,9 +2,19 @@
     margin: 0;
     
     box-sizing: border-box;
+    color: #eeeeee;
+    font-family: 'Dosis';
+
 }
 
-
+@font-face {
+    .dosis {
+    font-family: "Dosis", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    }
+}
 
 
 nav > div {
@@ -26,7 +36,8 @@ nav > div {
 }
 nav {
     position: fixed;
-    
+    background-color: rgba(53, 53, 53, 0.4);
+    backdrop-filter: blur(10px);
     width: 100%;
     top: 0;
 }
@@ -43,6 +54,9 @@ button {
     font-size: 1.5rem;
     border-radius: 25px;
     padding: .5rem 2rem;
+    border: none;
+    color: black;
+    
 }
 
 input {
@@ -50,7 +64,10 @@ input {
     outline: none;
     font-size: 2rem;
     padding-left: 1ch;
+    padding-bottom: .4rem;
     width: 50%;
+    border: none;
+    color: black;
 }
 
 .content-container {
@@ -59,30 +76,59 @@ input {
     flex-direction: column;
     
     gap: 2rem;
-    padding-top: 5rem;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
     
-    
+    background-color: #4D869C;
+    background-image: linear-gradient(#FF7844, #1B1F3A);
+    height: 100%;
     
 }
 
 
 .current-content {
+    /* Image by <a href="https://pixabay.com/users/aalmeidah-4277022/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8033597">Almeida</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8033597">Pixabay</a> */
+    background-image: url('./sunset.png');
+    background-size: cover;
     display: flex;
     justify-content: space-between;
-    border: 1px solid black;
-    padding: 4rem 5rem;
+    flex-wrap: wrap;
+    align-items: center;
+    min-width: 370px;
     max-width: 60%;
     margin: 0 auto;
 }
+.current-details {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    background-color: rgba(53, 53, 53, 0.4);
+    padding: 1rem;
+    border-radius: 15px;
+}
+.location {
+    font-size: 2rem;
+    font-weight: 600;
+}
+.current-temp {
+    font-size: 6rem;
+    font-weight: 700;
+}
 
 .current-icon-desc {
+    background-color: rgba(53, 53, 53, 0.4);
+    padding: 1rem;
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
+.current-desc {
+    font-size: 2rem;
+}
 .content-title {
     font-size: 2rem;
+    font-weight: 800;
     width: 60%;
     margin: 0 auto;
     margin-bottom: 1rem;
@@ -90,10 +136,18 @@ input {
 }
 
 .content-cards-container {
-    border: 1px solid black;
+    min-width: 370px;
     width: 60%;
     margin: 0 auto;
-    padding: 4rem 5rem;
+    padding: 7rem 5rem;
     border-radius: 15px;
     max-width: 800px;
+    background-color: rgba(53, 53, 53, 0.4);
+}
+.daily-content {
+    text-align: center;
+}
+
+.last-container {
+    margin-bottom: 3rem;
 }
