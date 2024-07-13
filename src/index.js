@@ -5,7 +5,8 @@ import { changeUnitBtnFunc } from './change-unit.js'
 import { makeDailyCards } from './dom.js'
 
  //default city
-getWeather('detroit');
+ 
+
 changeUnitBtnFunc()
 getWeather(getUserCity());
 makeDailyCards()
