@@ -1,5 +1,5 @@
 import {updateCurrentCard, makeDailyCards, makeHourlyCards, firstCardDom, loadWheels} from './dom.js';
-
+import {currentWeatherTheme} from './weather-theme.js'
 
 export let currentWeather = {
 
@@ -24,6 +24,7 @@ export async function getWeather(city = 'detroit') {
   
   get3Days(city)
   updateCurrentCard()
+  currentWeatherTheme(await currentWeather.textCondition)
   firstCardDom.loadWheel.style.display = 'none'
   return data
   } catch (error) {

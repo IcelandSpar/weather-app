@@ -9,6 +9,8 @@ export const firstCardDom = {
     currentConditionText: document.querySelector('.current-desc'),
     currentConditionIcon: document.querySelector('.current-icon'),
     loadWheel: document.querySelector('.loader'),
+    currentContent: document.querySelector('.current-content'),
+    contentContainer: document.querySelector('.content-container'),
 }
 
 export function currentLoadingWheel() {
